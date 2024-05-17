@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{       int r;
+	float A;
+
+	clrscr();
+
+	printf("Enter the value of radius = ");
+	scanf("%d",&r);
+
+	A = (2*3.14)*(r);
+
+	printf("The perimeter of the circle is = %.3f ",A);
+
+	getch();
+}
