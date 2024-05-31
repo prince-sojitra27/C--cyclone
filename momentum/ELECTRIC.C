@@ -5,7 +5,7 @@ main ()
 
 {
 	int a;
-	float f;
+	float f,q;
 
 	clrscr();
 
@@ -15,28 +15,31 @@ main ()
 	//for the first 50 units
 	if(a<=50)
 	{
-		f=a*(0.50);
+		f= (a*0.50);
 		printf("\n\n");
 		printf("Your electricity bill is = %.2f Rs.",f);
 	}
 	//for the next 100 units
 	else if(a<=150)
 	{
-		f=a*(0.75);
+		f=25+(a-100)*(0.75);
 		printf("\n\n");
 		printf("Your electricity bill is = %.2f Rs.",f);
 	}
 	//for the next 100 units
 	else if(a<=250)
 	{
-		f=a*(1.20);
+		f=100+ (a-100)*(1.20);
 		printf("\n\n");
 		printf("Your electricity bill is = %.2f Rs.",f);
 	}
 	//for 250+ units
 	else if(a>250)
 	{
-		f=a*(1.50);
+		f=220+ (a-250) * (1.50);
+		q=(f*20)/100;
+		f+=q;
+
 		printf("\n\n");
 		printf("Your electricity bill is = %.2f Rs.",f);
 	}
